@@ -2,15 +2,16 @@
 
 <title>Connexion</title>
 
-<form action="" method="post">
+<form action="connexion.php" method="post">
     <input type="text" name="login" placeholder="Login"><br>
     <input type="text" name="password" placeholder="password"><br>
-    <input type="submit" name="envoyer"><br>
+    <input type="submit" name="envoyer" value="Connexion"><br>
 </form>
 
 <?php
+session_start();
 
-function verif()
+function verifco()
 
 {
 
@@ -41,7 +42,7 @@ function verif()
         session_start();
         echo 'Bienvenue à toi '.$_POST['login'].'<br/>';
         $_SESSION['login']=$_POST['login'];
-        header('Location:index.php');
+        header('Location:profil.php');
         
     }
     
@@ -54,7 +55,7 @@ function verif()
 
 }
 
-verif();
+verifco();
 
 ?>
 
