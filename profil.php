@@ -11,7 +11,7 @@ $resultat= mysqli_fetch_assoc($query);
 
 ?>
 
-                        <!-- HTML -->
+                     
 <html>
 
 <head>
@@ -35,7 +35,7 @@ $resultat= mysqli_fetch_assoc($query);
 
 
 
-                        <!-- PHP -->
+<!-- PHP -->
 <?php
 
 

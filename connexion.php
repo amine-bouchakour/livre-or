@@ -11,6 +11,9 @@
 <?php
 session_start();
 
+$_SESSION['login']=$_POST['login'];
+
+
 function verifco()
 
 {
@@ -46,9 +49,13 @@ function verifco()
         
     }
     
-    
+    if(empty($_POST['login']) and empty($_POST['password']))
 
-    if(isset($compte) and $compte==false)
+    {
+        echo 'Veuillez entrez vos identifiants'.'<br/>';
+    }
+
+    else
     {
         echo 'Login ou mot de passe incorrecte'.'<br/>';
     }
