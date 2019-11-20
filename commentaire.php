@@ -1,8 +1,8 @@
 <?php
 session_start();
+date_default_timezone_set('Europe/Paris');
+$date = date("Y-m-d H:i:s");
 
-$date = date("Y-m-d");
-$heure = date("H:i");
 
 
 
@@ -10,10 +10,12 @@ $heure = date("H:i");
 
 
 echo $date.'<br/>';
-echo $heure.'<br/>';
+
+
 
 
 $login=$_SESSION['login'];
+
 
 
 ?>
@@ -32,7 +34,6 @@ $requete1= "SELECT id FROM utilisateurs WHERE login='$login' ";
 $query1= mysqli_query($connexion,$requete1);
 $resultat1= mysqli_fetch_assoc($query1);
 
-echo $resultat1['id'].'<br/>';
 
 
 
