@@ -1,7 +1,10 @@
 <?php
 session_start();
 date_default_timezone_set('Europe/Paris');
-$date = date("Y-m-d H:i:s");
+$date = date("Y/m/d H:i");
+
+
+echo $date;
 
 
 
@@ -9,16 +12,13 @@ $date = date("Y-m-d H:i:s");
 
 
 
-echo $date.'<br/>';
-
-
-
-
-$login=$_SESSION['login'];
+echo $_SESSION['login'];
 
 
 
 ?>
+<title>Commentaire</title>
+
 
 <form action="" method="post">
 <textarea name="message" id="" cols="30" rows="10">
@@ -30,7 +30,7 @@ $login=$_SESSION['login'];
 <?php
 
 $connexion=mysqli_connect("localhost","root","","livreor");
-$requete1= "SELECT id FROM utilisateurs WHERE login='$login' ";
+$requete1= "SELECT id FROM utilisateurs WHERE login='".$_SESSION['login']."' ";
 $query1= mysqli_query($connexion,$requete1);
 $resultat1= mysqli_fetch_assoc($query1);
 

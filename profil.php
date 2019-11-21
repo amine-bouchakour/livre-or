@@ -8,7 +8,7 @@ $requete = "SELECT * FROM utilisateurs WHERE login='".$_SESSION['login']."' ";
 $query = mysqli_query($connexion,$requete);
 $resultat= mysqli_fetch_assoc($query);
 
-
+echo $_SESSION['login']
 ?>
 
                      

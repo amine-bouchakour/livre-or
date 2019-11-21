@@ -9,9 +9,7 @@
 </form>
 
 <?php
-session_start();
 
-$_SESSION['login']=$_POST['login'];
 
 
 function verifco()

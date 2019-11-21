@@ -58,6 +58,10 @@ function verifin()
 
 }
 
+
+
+// FONCTION APPELE
+
 verifin();
 
 
