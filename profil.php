@@ -28,6 +28,7 @@ $resultat= mysqli_fetch_assoc($query);
 <label  for="password">PASSWORD</label> <input class="bor" type="text" name="password" value="<?php echo $resultat['password']; ?>"  required><br>
 <label  for="confirmpassword">CONFIRMATION PASSWORD</label>  <input class="bor" type="text" name="confirmpassword" value="<?php echo $resultat['password']; ?>" required><br>
 <input type="submit" name="submit" value="Modifier profil"></div>
+<input type="submit" name="retour" value="Retour" id="">
 </form>
 <p class="align"><?php verificationprof() ?></p>
 
@@ -37,7 +38,10 @@ $resultat= mysqli_fetch_assoc($query);
 <!-- PHP -->
 <?php
 
-
+if(isset($_POST['retour']))
+{
+    header ("Location:index.php");
+}
 
 function verificationprof()
 

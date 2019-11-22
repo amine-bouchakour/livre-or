@@ -1,13 +1,13 @@
 <?php
 session_start();
 
+include("header.php");
+
 date_default_timezone_set('Europe/Paris');
 $date = date("Y/m/d H:i");
 
 $newdate=date('d-m-Y à H:i',strtotime($date));
 
-echo $date.'<br/>';
-echo $newdate.'<br/>';
 
 // REQUETE SUR TOUT SUR TABLE COMMENTAIRES
 $connexion3= mysqli_connect("localhost","root","","livreor");
@@ -28,8 +28,8 @@ $requete2 = "SELECT Id,login FROM utilisateurs "; // WHERE id='$ID_utilisateur'
 $query2 = mysqli_query($connexion,$requete2);
 $tabutil = mysqli_fetch_all($query2);
 
-echo count($tabutil).' utilisateurs'.'<br/>';
-echo count($tabcom).' commentaires'.'<br/>'.'<br/>';
+echo 'Il y a '.count($tabutil).' utilisateurs inscrits sur le site'.'<br/>';
+echo 'Il y a '.count($tabcom).' commentaires postés'.'<br/>'.'<br/>';
 
 
 
@@ -39,14 +39,15 @@ $c=count($tabutil);
 date_default_timezone_set('Europe/Paris');
 
 
-if(isset($_SESSION))
+if(isset($_SESSION['login']))
 {
     echo 'Salut, tu es bien connecté !'.'<br/>'.'<br/>';
 }
 else {
-    echo 'Vous devez vous connectez pour pouvoir poster un commentaire'.'<br/>';
+    echo 'Vous devez vous connectez pour pouvoir poster un commentaire'.'<br/>'.'<br/>';
 }
 
+?> <div class="com text2"><a href="commentaire.php">Postez un commentaire</a></div>         <?php
 
 $i=0;
 while ($i<$j)
@@ -71,11 +72,15 @@ while ($i<$j)
     }
 }
 
+
 ?>
 
 <html>
+
+    <head>
     <title>Livre d'or</title>
     <link rel="stylesheet" href="livre-or.css" type="text/css">
+    </head>
 
 
 </html>

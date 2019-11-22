@@ -1,18 +1,26 @@
 <html>
 
+<head>
 <title>Inscription</title>
 <link rel="stylesheet" href="livre-or.css" type="text/css">
-
+</head>
 
 <form action="inscription.php" method="post"> 
 <input type="text" name="login" placeholder="Login" value=""><br>
 <input type="password" name="password" placeholder="Password" value=""><br>
 <input type="password" name="confirmpassword" placeholder="Confirmpassword" value=""><br>
-<input type="submit" name="envoyer" value="Inscription">
+<input type="submit" name="envoyer" value="Valider">
+<input type="submit" name="retour" value="Retour" id="">
 </form>
 
 
 <?php 
+
+if(isset($_POST['retour']))
+{
+    header ("Location:index.php");
+}
+
 
 function verifin()
 

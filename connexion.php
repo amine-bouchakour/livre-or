@@ -1,7 +1,9 @@
 <html>
 
+<head>
 <title>Connexion</title>
 <link rel="stylesheet" href="livre-or.css" type="text/css">
+</head>
 
 
 <form action="connexion.php" method="post">
@@ -45,7 +47,7 @@ function verifco()
         session_start();
         echo 'Bienvenue à toi '.$_POST['login'].'<br/>';
         $_SESSION['login']=$_POST['login'];
-        header('Location:profil.php');
+        header('Location:index.php');
         
     }
     

@@ -2,3 +2,51 @@ body {
     background-color: rgb(241, 193, 131);
 }
 
+.nav{
+width: 200px ;    
+height: 110px ;
+background-color: cadetblue;
+border : 2px black solid;
+border-radius: 3em;
+margin: 0px 200px;
+}
+
+.nav1{
+width: 200px ;    
+height: 110px ;
+background-color: cadetblue;
+border : 2px black solid;
+border-radius: 3em;
+margin: 0px 100px;
+}
+
+.flexrow{
+margin: 20px 0px 50px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.text{
+text-align: center;
+font-size: xx-large;
+}
+
+a:link
+{
+text-decoration:none;
+}
+
+.com{
+width: 200px;
+height: 25px;
+border: 2px black solid;
+border-radius: 2em;
+background-color: chocolate;
+}
+
+.text2{
+text-align: center;
+font-size: large;
+font-weight: bold;
+}
