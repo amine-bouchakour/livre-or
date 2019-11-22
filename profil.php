@@ -8,7 +8,6 @@ $requete = "SELECT * FROM utilisateurs WHERE login='".$_SESSION['login']."' ";
 $query = mysqli_query($connexion,$requete);
 $resultat= mysqli_fetch_assoc($query);
 
-echo $_SESSION['login']
 ?>
 
                      
@@ -17,7 +16,7 @@ echo $_SESSION['login']
 <head>
     <meta charset="utf-8">
     <title>Profil</title>
-    <link rel="stylesheet" href="" type="text/css">
+    <link rel="stylesheet" href="livre-or.css" type="text/css">
     
 </head>
 

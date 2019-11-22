@@ -1,6 +1,7 @@
 <html>
 
 <title>Inscription</title>
+<link rel="stylesheet" href="livre-or.css" type="text/css">
 
 
 <form action="inscription.php" method="post"> 

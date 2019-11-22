@@ -39,12 +39,18 @@ $c=count($tabutil);
 date_default_timezone_set('Europe/Paris');
 
 
+if(isset($_SESSION))
+{
+    echo 'Salut, tu es bien connecté !'.'<br/>'.'<br/>';
+}
+else {
+    echo 'Vous devez vous connectez pour pouvoir poster un commentaire'.'<br/>';
+}
 
 
 $i=0;
 while ($i<$j)
 {
-    
     
     $k=0;
     while($k<$c)
@@ -54,100 +60,22 @@ while ($i<$j)
         {
             $date = $tabcom[$i][3];
             $newdate=date('d-m-Y à H:i:s',strtotime($date));
-            echo 'Posté le '.$newdate.' par '.'<b>'.$tabutil[$k][1].'</b>'.' : '.$tabcom[$i][1].'<br/>';
+            echo 'Posté le '.$newdate.' par '.'<b>'.$tabutil[$k][1].'</b>'.' : '.'<br/>'.$tabcom[$i][1].'<br/>'.'<br/>'.'<br/>';
             $i++;
-        break;
-           
-            
+        break;   
         }
         else
         {
             $k++;
         }
-        
     }
- 
- 
-    
 }
-
-
-
-
-
-
-
-
-//    foreach($tabcom as $key => $value)
-//    {
-
-
-//     echo $value[2].' '.$value[1].' '.$value[3].'<br/>';
-
-     
-//    }
-
-//    echo '<br/>';
-
-//    foreach($tabutil as $key => $value)
-//    {
-//        echo $value[0].' '.$value[1].'<br/>';
-//    }
-
-
-
-
-// if(($tabutil)['Id']=($tabcom)['id_utilisateur'])
-// {
-//     echo 'Posté le '.$tabcom['date'].' par '.$tabutil['login'].' : '.$tabcom['commentaire'].'<br/>';
-// }
-
-// $j= count($tabcomptecol);
-
-// echo $j;
-
-// $i=0;
-
-// while ($i<$j)
-//         {
-
-//             if ($tabutil['Id'][0]==$tabcom['id_utilisateur'][0])
-//                 {
-//                     echo 'Posté le '.$tabcom['date'].' par '.$tabutil['login'].' : '.$tabcom['commentaire'].'<br/>';
-//                     $i++;  
-//                 }
-
-//         }
-// {
-
-// }
-
-
-// echo ($tabutil)['login'].'<br/>'.'<br/>';
-
-// echo $ID_utilisateur[0].'<br/>';
-
-
-// echo ($tabcom)['id_utilisateur'].'<br/>';
-
-// echo ($tabcom)['commentaire'].'<br/>';
-
-
-// var_dump($tabcom).'<br/>';
-
-
-
-
-// var_dump($tabutil);
-
-
-
-
 
 ?>
 
 <html>
     <title>Livre d'or</title>
+    <link rel="stylesheet" href="livre-or.css" type="text/css">
 
 
 </html>

@@ -1,6 +1,8 @@
 <html>
 
 <title>Connexion</title>
+<link rel="stylesheet" href="livre-or.css" type="text/css">
+
 
 <form action="connexion.php" method="post">
     <input type="text" name="login" placeholder="Login"><br>

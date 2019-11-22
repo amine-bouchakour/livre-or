@@ -4,12 +4,6 @@ date_default_timezone_set('Europe/Paris');
 $date = date("Y/m/d H:i");
 
 
-
-
-
-
-
-
 echo $_SESSION['login'];
 
 
@@ -19,7 +13,7 @@ echo $_SESSION['login'];
 
 
 <form action="" method="post">
-<textarea name="message" id="" cols="30" rows="10">
+<textarea name="message" id="" maxlength="50" cols="30" rows="10">
 </textarea>
 <input type="submit" name="valider" value="Envoyer message" id="">
 </form>
@@ -38,7 +32,7 @@ $resultat1= mysqli_fetch_assoc($query1);
 
 if(isset($_POST['valider'])==true)
 {
-    echo 'étape 0'.'<br/>';
+    
     if(isset($_POST['message']) and !empty($_POST['message']))
     {
         $message =$_POST['message'];
@@ -46,13 +40,15 @@ if(isset($_POST['valider'])==true)
         $connexion=mysqli_connect("localhost","root","","livreor");
         $requete="INSERT INTO `commentaires` (`commentaire`,`id_utilisateur`,`date`) VALUES ('".$message2."','".$resultat1['id']."','".$date."')";
         $query=mysqli_query($connexion,$requete);
-        header("Location:index.php");
+        header("Location:livre-or.php");
     }
 }
 
 ?>
 <html>
     <title>Commentaire</title>
+    <link rel="stylesheet" href="livre-or.css" type="text/css">
+
 
 
 
