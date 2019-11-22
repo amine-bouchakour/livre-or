@@ -1,14 +1,19 @@
 <?php
 session_start();
 
+date_default_timezone_set('Europe/Paris');
+$date = date("Y/m/d H:i");
 
+$newdate=date('d-m-Y à H:i',strtotime($date));
+
+echo $date.'<br/>';
+echo $newdate.'<br/>';
 
 // REQUETE SUR TOUT SUR TABLE COMMENTAIRES
 $connexion3= mysqli_connect("localhost","root","","livreor");
 $requete3 = "SELECT * FROM commentaires ORDER BY `Id` DESC";
 $query3 = mysqli_query($connexion3,$requete3);
 $tabcom = mysqli_fetch_all($query3);
-
 
 
 
@@ -31,10 +36,15 @@ echo count($tabcom).' commentaires'.'<br/>'.'<br/>';
 $j= count($tabcomptecol);
 $c=count($tabutil);
 
+date_default_timezone_set('Europe/Paris');
+
+
+
 
 $i=0;
 while ($i<$j)
 {
+    
     
     $k=0;
     while($k<$c)
@@ -42,16 +52,22 @@ while ($i<$j)
 
         if($tabcom[$i][2]==$tabutil[$k][0])
         {
-            echo 'Posté le '.$tabcom[$i][3].' par '.'<b>'.$tabutil[$k][1].'</b>'.' : '.$tabcom[$i][1].'<br/>';
+            $date = $tabcom[$i][3];
+            $newdate=date('d-m-Y à H:i:s',strtotime($date));
+            echo 'Posté le '.$newdate.' par '.'<b>'.$tabutil[$k][1].'</b>'.' : '.$tabcom[$i][1].'<br/>';
             $i++;
+        break;
+           
+            
         }
         else
         {
             $k++;
         }
-
+        
     }
-    
+ 
+ 
     
 }
 

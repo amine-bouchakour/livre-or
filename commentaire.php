@@ -4,8 +4,6 @@ date_default_timezone_set('Europe/Paris');
 $date = date("Y/m/d H:i");
 
 
-echo $date;
-
 
 
 
@@ -37,13 +35,16 @@ $resultat1= mysqli_fetch_assoc($query1);
 
 
 
+
 if(isset($_POST['valider'])==true)
 {
     echo 'étape 0'.'<br/>';
     if(isset($_POST['message']) and !empty($_POST['message']))
     {
+        $message =$_POST['message'];
+        $message2= addslashes($message);
         $connexion=mysqli_connect("localhost","root","","livreor");
-        $requete="INSERT INTO `commentaires` (`commentaire`,`id_utilisateur`,`date`) VALUES ('".$_POST['message']."','".$resultat1['id']."','".$date."')";
+        $requete="INSERT INTO `commentaires` (`commentaire`,`id_utilisateur`,`date`) VALUES ('".$message2."','".$resultat1['id']."','".$date."')";
         $query=mysqli_query($connexion,$requete);
         header("Location:index.php");
     }
