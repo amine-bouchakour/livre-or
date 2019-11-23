@@ -27,7 +27,7 @@ $resultat= mysqli_fetch_assoc($query);
 <label  for="login">LOGIN</label> <input class="bor" type="text" name="login" value="<?php echo $_SESSION['login'] ; ?>"  required><br>
 <label  for="password">PASSWORD</label> <input class="bor" type="text" name="password" value="<?php echo $resultat['password']; ?>"  required><br>
 <label  for="confirmpassword">CONFIRMATION PASSWORD</label>  <input class="bor" type="text" name="confirmpassword" value="<?php echo $resultat['password']; ?>" required><br>
-<input type="submit" name="submit" value="Modifier profil"></div>
+<input type="submit" name="submit" value="Mettre à jour votre profil"></div>
 <input type="submit" name="retour" value="Retour" id="">
 </form>
 <p class="align"><?php verificationprof() ?></p>

@@ -4,9 +4,9 @@ session_start();
 include("header.php");
 
 date_default_timezone_set('Europe/Paris');
-$date = date("Y/m/d H:i");
+$date = date("Y-m-d H:i:s");
 
-$newdate=date('d-m-Y à H:i',strtotime($date));
+$newdate=date("d-m-Y à H:i:s",strtotime($date));
 
 
 // REQUETE SUR TOUT SUR TABLE COMMENTAIRES
@@ -28,8 +28,14 @@ $requete2 = "SELECT Id,login FROM utilisateurs "; // WHERE id='$ID_utilisateur'
 $query2 = mysqli_query($connexion,$requete2);
 $tabutil = mysqli_fetch_all($query2);
 
-echo 'Il y a '.count($tabutil).' utilisateurs inscrits sur le site'.'<br/>';
-echo 'Il y a '.count($tabcom).' commentaires postés'.'<br/>'.'<br/>';
+
+
+
+
+
+
+echo '<p class="text3">'.'Il y a '.'<b>'.count($tabutil).' utilisateurs'.'</b>'.' inscrits sur le site.'.'</p>';
+echo '<p class="text3">'.'Et il y a '.'<b>'.count($tabcom).' commentaires'.'</b>'.' postés.'.'</p>'.'<br/>'.'<br/>';
 
 
 
@@ -39,15 +45,20 @@ $c=count($tabutil);
 date_default_timezone_set('Europe/Paris');
 
 
-if(isset($_SESSION['login']))
+if (isset($_SESSION['login']))
+
 {
-    echo 'Salut, tu es bien connecté !'.'<br/>'.'<br/>';
-}
-else {
-    echo 'Vous devez vous connectez pour pouvoir poster un commentaire'.'<br/>'.'<br/>';
+    ?> <a href="commentaire.php"><div class="com text2 ">Poster un commentaire</div></a><br> <?php
 }
 
-?> <div class="com text2"><a href="commentaire.php">Postez un commentaire</a></div>         <?php
+else {
+    echo '<b>'.'Vous devez vous connecter pour poster un message'.'</b>'.'<br>'.'<br>';
+}
+
+
+?>
+<div class="co">
+<?php
 
 $i=0;
 while ($i<$j)
@@ -61,10 +72,13 @@ while ($i<$j)
         {
             $date = $tabcom[$i][3];
             $newdate=date('d-m-Y à H:i:s',strtotime($date));
-            echo 'Posté le '.$newdate.' par '.'<b>'.$tabutil[$k][1].'</b>'.' : '.'<br/>'.$tabcom[$i][1].'<br/>'.'<br/>'.'<br/>';
+            echo '<u>'.'Posté le '.'<b class="col1">'.$newdate.'</b>'.' par '.'<b class="up"><p>'.$tabutil[$k][1].'</p></b>'.'</u>'.'<i class="up"><p class="col">'.'"'.$tabcom[$i][1].'"'.'</p></i>';
+            ?> <p class="p1"></p><?php
+            
             $i++;
         break;   
         }
+
         else
         {
             $k++;
@@ -74,6 +88,8 @@ while ($i<$j)
 
 
 ?>
+</div>
+
 
 <html>
 

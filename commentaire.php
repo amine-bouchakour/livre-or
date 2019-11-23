@@ -22,6 +22,7 @@ $date = date("Y/m/d H:i");
 
 <?php
 
+
 $connexion=mysqli_connect("localhost","root","","livreor");
 $requete1= "SELECT id FROM utilisateurs WHERE login='".$_SESSION['login']."' ";
 $query1= mysqli_query($connexion,$requete1);
