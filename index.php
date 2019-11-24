@@ -20,10 +20,10 @@
 
         if(isset($_SESSION['login']))
         {
-            echo 'Bienvenue à toi '.$_SESSION['login'].'<br/>';
+            echo 'Bienvenue à toi '.'<b class="up">'.$_SESSION['login'].'</b> !!'.'<br/>';
         }
         else 
-        echo 'Bienvenue à toi !!!'.'<br/>';
+        echo 'Bienvenue à toi !'.'<br/>';
 
         ?>
 
