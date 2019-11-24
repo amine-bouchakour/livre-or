@@ -20,6 +20,20 @@ $resultat= mysqli_fetch_assoc($query);
     
 </head>
 
+<body>
+    
+
+
+<header class="header2">
+
+    <?php
+    include('header2.php');
+    ?>
+
+</header>
+
+<main>
+
 
 <!-- FORMULAIRE CHANGEMENT DONNEES PROFIL -->
 
@@ -95,6 +109,18 @@ function verificationprof()
 ?>
 
 
+
+
+</main>
+
+<footer- class="header2">
+<?php
+include('header2.php');
+?>
+</footer>
+
+
+</body>
 
 
 </html>

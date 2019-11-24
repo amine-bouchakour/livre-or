@@ -5,6 +5,20 @@
 <link rel="stylesheet" href="livre-or.css" type="text/css">
 </head>
 
+<body>
+    
+
+
+<header class="header2">
+
+    <?php
+    include('header2.php');
+    ?>
+
+</header>
+
+<main>
+
 <form action="inscription.php" method="post"> 
 <input type="text" name="login" placeholder="Login" value=""><br>
 <input type="password" name="password" placeholder="Password" value=""><br>
@@ -77,6 +91,17 @@ verifin();
 
 ?>
 
+
+</main>
+
+<footer- class="header2">
+<?php
+include('header2.php');
+?>
+</footer>
+
+
+</body>
 
 
 

@@ -28,12 +28,23 @@ $requete2 = "SELECT Id,login FROM utilisateurs "; // WHERE id='$ID_utilisateur'
 $query2 = mysqli_query($connexion,$requete2);
 $tabutil = mysqli_fetch_all($query2);
 
+?>
+
+<html>
+
+    <head>
+    <title>Livre d'or</title>
+    <link rel="stylesheet" href="livre-or.css" type="text/css">
+    </head>
+
+<body>
+    <main>
+
+    
 
 
 
-
-
-
+<?php
 echo '<p class="text3">'.'Il y a '.'<b>'.count($tabutil).' utilisateurs'.'</b>'.' inscrits sur le site.'.'</p>';
 echo '<p class="text3">'.'Et il y a '.'<b>'.count($tabcom).' commentaires'.'</b>'.' postés.'.'</p>'.'<br/>'.'<br/>';
 
@@ -42,7 +53,7 @@ echo '<p class="text3">'.'Et il y a '.'<b>'.count($tabcom).' commentaires'.'</b>
 $j= count($tabcomptecol);
 $c=count($tabutil);
 
-date_default_timezone_set('Europe/Paris');
+
 
 
 if (isset($_SESSION['login']))
@@ -90,13 +101,26 @@ while ($i<$j)
 ?>
 </div>
 
+<?php
+if (isset($_SESSION['login']))
 
-<html>
+{
+    ?> <a href="commentaire.php"><div class="com text2 ">Poster un commentaire</div></a><br> <?php
+}
 
-    <head>
-    <title>Livre d'or</title>
-    <link rel="stylesheet" href="livre-or.css" type="text/css">
-    </head>
+else {
+    echo '<b>'.'Vous devez vous connecter pour poster un message'.'</b>'.'<br>'.'<br>';
+}
+?>
+
+<footer>
+    <section class="footer1">
+        <p class="text4">Copyright 2019, Bouchakour Amine</p>
+    </section>
+</footer>
+
+</main>
+</body>
 
 
 </html>
