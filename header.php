@@ -44,22 +44,29 @@
         else 
         {
             ?> <section class="flexrow">
+                  <a href="index.php">
+                        <div class="nav1">
+                            <div>
+                                <p class="text">Page d'acceuil</p>
+                            </div>
+                        </div>
+                    </a>
                     <a href="inscription.php">
-                        <div class="nav">
+                        <div class="nav1">
                             <div>
                                 <p class="text">Inscription</p>
                             </div>
                         </div>
                     </a>
                     <a href="livre-or.php">
-                        <div class="nav">
+                        <div class="nav1">
                             <div>
                                 <p class="text">Livre-or</p>
                             </div>
                         </div>
                     </a>
                     <a href="connexion.php">
-                        <div class="nav">
+                        <div class="nav1">
                             <div>
                                 <p class="text">Connexion</p>
                             </div>
@@ -68,7 +75,6 @@
                 </section>
                 <?php
         }
-
 
         ?>
 

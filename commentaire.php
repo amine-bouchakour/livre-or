@@ -26,14 +26,14 @@ $date = date("Y/m/d H:i");
 
     <main>
 
-
-        <form action="" method="post">
-            <textarea name="message" id="" maxlength="50" cols="30" rows="10">
-            </textarea><br>
-            <input type="submit" name="valider" value="Envoyer message" id="">
-            <input type="submit" name="retour" value="Retour" id="">
-        </form>
-
+        <div class="profil">
+            <form action="" method="post">
+                <textarea name="message" id="" maxlength="50" cols="40" rows="15">
+                </textarea><br><br>
+                <input class="bor2" type="submit" name="valider" value="Envoyer message" id=""><br><br>
+                <input class="bor2" type="submit" name="retour" value="Retour" id="">
+            </form>
+        <div>
 
         <?php
 
