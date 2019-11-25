@@ -8,12 +8,12 @@
 
 <body>
 
-<?php
-if(isset($_POST['retour']))
-{
-    header ("Location:index.php");
-}
-?>
+    <?php
+    if(isset($_POST['retour']))
+    {
+        header ("Location:index.php");
+    }
+    ?>
 
 
     <header class="header2">
@@ -30,8 +30,8 @@ if(isset($_POST['retour']))
         <div class="profil">
             <form action="connexion.php" method="post"><br>
                 <input class="bor" type="text" name="login" placeholder="Login"><br><br><br>
-                <input class="bor" type="password" name="password" placeholder="password"><br><br><br>
-                <input class="bor2" type="submit" name="envoyer" value="Connexion"><br><br>
+                <input class="bor" type="password" name="password" placeholder="password"><br><br>
+                <input class="bor2" type="submit" name="envoyer" value="Connexion"><br><br><br><br>
                 <input class="bor2" type="submit" name="retour" value="Retour" id=""><br><br>
                 <?php verifco(); ?>
             </form>

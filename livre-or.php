@@ -61,60 +61,63 @@ $tabutil = mysqli_fetch_all($query2);
         if (isset($_SESSION['login']))
 
         {
-            ?> <a href="commentaire.php">
+            ?>  <a href="commentaire.php">
                     <div class="com text2 ">Poster un commentaire</div>
-                </a><br> <?php
+                </a><br> 
+            <?php
         }
 
         else {
             echo '<b><p class="text5">'.'Vous devez vous connecter pour poster un message'.'</p></b>'.'<br>'.'<br>';
         }
 
-
         ?>
-                <div class="co">
-                    <?php
 
-        $i=0;
-        while ($i<$j)
-        {
-            
-            $k=0;
-            while($k<$c)
+        <div class="co">
+            <?php
+
+            $i=0;
+            while ($i<$j)
             {
-
-                if($tabcom[$i][2]==$tabutil[$k][0])
+                
+                $k=0;
+                while($k<$c)
                 {
-                    $date = $tabcom[$i][3];
-                    $newdate=date('d-m-Y à H:i:s',strtotime($date));
-                    echo '<u>'.'Posté le '.'<b class="col1">'.$newdate.'</b>'.' par '.'<b class="up"><p>'.$tabutil[$k][1].'</p></b>'.'</u>'.'<i class="up"><p class="col">'.'"'.$tabcom[$i][1].'"'.'</p></i>';
-                    ?> <p class="p1"></p><?php
-                    
-                    $i++;
-                break;   
-                }
 
-                else
-                {
-                    $k++;
+                    if($tabcom[$i][2]==$tabutil[$k][0])
+                    {
+                        $date = $tabcom[$i][3];
+                        $newdate=date('d-m-Y à H:i:s',strtotime($date));
+
+                        echo '<u>'.'Posté le '.'<b class="col1">'.$newdate.'</b>'.' par '.'<b class="up"><p>'.$tabutil[$k][1].'</p></b>'.'</u>'.'<i class="up"><p class="col">'.'"'.$tabcom[$i][1].'"'.'</p></i>';
+                        ?> <p class="p1"></p><?php
+                        
+                        $i++;
+                        break;   
+                    }
+
+                    else
+                    {
+                        $k++;
+                    }
                 }
             }
-        }
 
 
             ?>
-                    </div>
+        </div>
 
-                    <?php
+            <?php
             if (isset($_SESSION['login']))
-
             {
                 ?> <a href="commentaire.php">
                         <div class="com text2 ">Poster un commentaire</div>
-                    </a><br> <?php
+                    </a><br> 
+                <?php
             }
 
-            else {
+            else 
+            {
                 echo '<b><p class="text5">'.'Vous devez vous connecter pour poster un message'.'</p></b>'.'<br>'.'<br>';
             }
             ?>

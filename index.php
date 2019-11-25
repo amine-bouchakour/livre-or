@@ -20,17 +20,26 @@
 
         if(isset($_SESSION['login']))
         {
-            echo '<p class="text3">'.'Bienvenue à toi '.'<b class="up">'.$_SESSION['login'].'</b> !!'.'</p>'.'<br/>';
+            echo '<p class="text6">'.'Bienvenue à toi '.'<b class="up">'.$_SESSION['login'].'</b> !!'.'</p>';
         }
         else 
-        echo '<p class="text3">'.'Bienvenue à toi !'.'</p>'.'<br/>';
+        echo '<p class="text6">'.'Bienvenue à toi !'.'</p>';
 
         ?>
 
         <div>
-            <p class="text3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates blanditiis nam repellendus perferendis animi, assumenda reprehenderit aperiam nihil ad vero numquam delectus vel nesciunt voluptas tenetur quidem modi ea! Ipsam facere fuga nesciunt reiciendis, sed temporibus cum error fugit quos eos vitae distinctio aliquid voluptatum. Libero, fugit aut. Eos, veritatis.</p> <br>
+            <p class="text3 font">Les instants précieux que l'on garde en mémoire <br>
+                font de nos souvenirs de très jolies histoires.<br><br>
+                Si l'on dit le silence est d'or<br>
+                les écrits restent à tout jamais un trésor.<br><br>
+                <b>Laissez nous quelques mots</b><br><br>
+                Pour qu'aujourd'hui, demain, toujours,<br>
+                Les jours de pluie quand nos cheveux seront gris<br>
+                Nous puissions nous souvenir de vos messages partagés.
+                <?php if(isset($_SESSION['login'])){} else {echo '<p class="petit">'.'Vous devez vous inscrire et vous connecter pour poster un message'.'</p>';} ?></p> <br>
+                
             <img src="" alt="">
-            <p class="text3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates blanditiis nam repellendus perferendis animi, assumenda reprehenderit aperiam nihil ad vero numquam delectus vel nesciunt voluptas tenetur quidem modi ea! Ipsam facere fuga nesciunt reiciendis, sed temporibus cum error fugit quos eos vitae distinctio aliquid voluptatum. Libero, fugit aut. Eos, veritatis.</p>
+            
         </div>
 
 

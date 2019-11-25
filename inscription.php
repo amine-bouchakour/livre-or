@@ -24,12 +24,12 @@ session_start();
     </header>
 
     <main>
-    <?php
-    if(isset($_SESSION['login'])==true)
-        { 
-        echo '<p class="text3">'.'Vous êtes déjà connecté'.'</p>'.'<br>';
-        
-        }
+        <?php
+        if(isset($_SESSION['login'])==true)
+            { 
+            echo '<p class="text3">'.'Vous êtes déjà connecté'.'</p>'.'<br>';
+            
+            }
 
         else{
             ?>
@@ -38,16 +38,17 @@ session_start();
                     <input class="bor" type="text" name="login" placeholder="Login" value=""><br><br>
                     <input class="bor" type="password" name="password" placeholder="Password" value=""><br><br>
                     <input class="bor" type="password" name="confirmpassword" placeholder="Confirmpassword"
-                        value=""><br><br><br>
-                    <input class="bor2" type="submit" name="envoyer" value="Valider"><br><br>
+                        value=""><br><br>
+                    <input class="bor2" type="submit" name="envoyer" value="Valider"><br><br><br><br>
                     <input class="bor2" type="submit" name="retour" value="Retour" id=""><br><br>
                     <?php 
                         verifin();
                     ?>
                 </form>
-            </div> <?php
-        }
-        ?>
+            </div> 
+            <?php
+            }
+            ?>
 
         <?php 
             if(isset($_POST['retour']))

@@ -38,7 +38,7 @@
                         </div>
                     </a>
                 </section>
-                <?php
+            <?php
         }
 
         else 
@@ -73,7 +73,8 @@
                         </div>
                     </a>
                 </section>
-                <?php
+                
+            <?php
         }
 
         ?>

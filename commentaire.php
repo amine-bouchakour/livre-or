@@ -28,8 +28,9 @@ $date = date("Y/m/d H:i");
 
         <div class="profil">
             <form action="" method="post">
-                <textarea name="message" id="" maxlength="60" cols="40" rows="15"></textarea><br><br>
-                <input class="bor2" type="submit" name="valider" value="Envoyer message" id=""><br><br>
+                <label for="commentaire" class="col2">VOTRE COMMENTAIRE</label> <br>
+                <textarea class="bor3" name="message" id=""  maxlength="60" cols="50" rows="12"></textarea><br><br><br>
+                <input class="bor2" type="submit" name="valider" value="Envoyer message" id=""><br><br><br>
                 <input class="bor2" type="submit" name="retour" value="Retour" id="">
             </form>
         <div>
