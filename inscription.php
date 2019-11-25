@@ -1,4 +1,12 @@
+<?php
+session_start();
+?>
+
 <html>
+
+
+    
+
 
 <head>
     <title>Inscription</title>
@@ -16,19 +24,30 @@
     </header>
 
     <main>
-        <div class="profil">
-            <form action="inscription.php" method="post">
-                <input class="bor" type="text" name="login" placeholder="Login" value=""><br><br>
-                <input class="bor" type="password" name="password" placeholder="Password" value=""><br><br>
-                <input class="bor" type="password" name="confirmpassword" placeholder="Confirmpassword"
-                    value=""><br><br><br>
-                <input class="bor2" type="submit" name="envoyer" value="Valider"><br><br>
-                <input class="bor2" type="submit" name="retour" value="Retour" id=""><br><br>
-                <?php 
-                    verifin();
-                ?>
-            </form>
-        </div>
+    <?php
+    if(isset($_SESSION['login'])==true)
+        { 
+        echo '<p class="text3">'.'Vous êtes déjà connecté'.'</p>'.'<br>';
+        
+        }
+
+        else{
+            ?>
+            <div class="profil">
+                <form action="inscription.php" method="post">
+                    <input class="bor" type="text" name="login" placeholder="Login" value=""><br><br>
+                    <input class="bor" type="password" name="password" placeholder="Password" value=""><br><br>
+                    <input class="bor" type="password" name="confirmpassword" placeholder="Confirmpassword"
+                        value=""><br><br><br>
+                    <input class="bor2" type="submit" name="envoyer" value="Valider"><br><br>
+                    <input class="bor2" type="submit" name="retour" value="Retour" id=""><br><br>
+                    <?php 
+                        verifin();
+                    ?>
+                </form>
+            </div> <?php
+        }
+        ?>
 
         <?php 
             if(isset($_POST['retour']))

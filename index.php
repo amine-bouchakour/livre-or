@@ -20,13 +20,18 @@
 
         if(isset($_SESSION['login']))
         {
-            echo 'Bienvenue à toi '.'<b class="up">'.$_SESSION['login'].'</b> !!'.'<br/>';
+            echo '<p class="text3">'.'Bienvenue à toi '.'<b class="up">'.$_SESSION['login'].'</b> !!'.'</p>'.'<br/>';
         }
         else 
-        echo 'Bienvenue à toi !'.'<br/>';
+        echo '<p class="text3">'.'Bienvenue à toi !'.'</p>'.'<br/>';
 
         ?>
 
+        <div>
+            <p class="text3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates blanditiis nam repellendus perferendis animi, assumenda reprehenderit aperiam nihil ad vero numquam delectus vel nesciunt voluptas tenetur quidem modi ea! Ipsam facere fuga nesciunt reiciendis, sed temporibus cum error fugit quos eos vitae distinctio aliquid voluptatum. Libero, fugit aut. Eos, veritatis.</p> <br>
+            <img src="" alt="">
+            <p class="text3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates blanditiis nam repellendus perferendis animi, assumenda reprehenderit aperiam nihil ad vero numquam delectus vel nesciunt voluptas tenetur quidem modi ea! Ipsam facere fuga nesciunt reiciendis, sed temporibus cum error fugit quos eos vitae distinctio aliquid voluptatum. Libero, fugit aut. Eos, veritatis.</p>
+        </div>
 
 
 

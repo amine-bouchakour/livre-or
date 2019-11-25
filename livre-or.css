@@ -146,6 +146,7 @@ background-color: black;
 
 .col{
 color:white;
+white-space:nowrap;
 }
 
 .col1{
